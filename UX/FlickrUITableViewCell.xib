@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="flickrTableReuseIdentifier" rowHeight="81" id="xFo-dQ-slH" customClass="FlickrUITableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xFo-dQ-slH" id="Avj-Gy-044">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlickrPlaceHolder.png" translatesAutoresizingMaskIntoConstraints="NO" id="sIZ-jL-MIO">
+                        <rect key="frame" x="8" y="3" width="75" height="75"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="ASq-6w-vmi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Unknown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFH-LE-sMM">
+                        <rect key="frame" x="91" y="16" width="221" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details Unknown" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPd-oS-2lI">
+                        <rect key="frame" x="91" y="45" width="221" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cFH-LE-sMM" firstAttribute="top" secondItem="Avj-Gy-044" secondAttribute="topMargin" constant="8" id="0XQ-GX-cY4"/>
+                    <constraint firstItem="ZPd-oS-2lI" firstAttribute="trailing" secondItem="cFH-LE-sMM" secondAttribute="trailing" id="1ea-M8-CF5"/>
+                    <constraint firstItem="cFH-LE-sMM" firstAttribute="trailing" secondItem="Avj-Gy-044" secondAttribute="trailingMargin" id="3Zz-3L-KH5"/>
+                    <constraint firstItem="sIZ-jL-MIO" firstAttribute="centerY" secondItem="Avj-Gy-044" secondAttribute="centerY" id="PFE-Kx-B7z"/>
+                    <constraint firstItem="sIZ-jL-MIO" firstAttribute="top" secondItem="Avj-Gy-044" secondAttribute="topMargin" constant="-5" id="QVU-qK-1rR"/>
+                    <constraint firstItem="cFH-LE-sMM" firstAttribute="leading" secondItem="sIZ-jL-MIO" secondAttribute="trailing" constant="8" symbolic="YES" id="Uld-2h-9AX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZPd-oS-2lI" secondAttribute="bottom" constant="6.5" id="YXK-ZJ-94D"/>
+                    <constraint firstItem="ZPd-oS-2lI" firstAttribute="leading" secondItem="cFH-LE-sMM" secondAttribute="leading" id="Ysm-wK-L8g"/>
+                    <constraint firstItem="ZPd-oS-2lI" firstAttribute="top" secondItem="cFH-LE-sMM" secondAttribute="bottom" constant="8" symbolic="YES" id="eDU-LQ-a6S"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cFH-LE-sMM" secondAttribute="bottom" constant="35.5" id="zDd-Gx-ToM"/>
+                    <constraint firstItem="sIZ-jL-MIO" firstAttribute="leading" secondItem="Avj-Gy-044" secondAttribute="leadingMargin" id="zjT-pi-5o6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageDetails" destination="ZPd-oS-2lI" id="y0h-35-6eA"/>
+                <outlet property="imageTitle" destination="cFH-LE-sMM" id="fgy-us-hLJ"/>
+                <outlet property="thumbnailImageView" destination="sIZ-jL-MIO" id="c0K-NB-la4"/>
+            </connections>
+            <point key="canvasLocation" x="126" y="239.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FlickrPlaceHolder.png" width="75" height="75"/>
+    </resources>
+</document>
